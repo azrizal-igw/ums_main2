@@ -1,0 +1,152 @@
+<div class="userdetails">
+	<h2><?php echo __('Userdetails');?></h2>
+	<table cellpadding="0" cellspacing="0">
+	<tr>
+			<th><?php echo $this->Paginator->sort('id');?></th>
+			<th><?php echo $this->Paginator->sort('localid');?></th>
+			<th><?php echo $this->Paginator->sort('icno');?></th>
+			<th><?php echo $this->Paginator->sort('name');?></th>
+			<th><?php echo $this->Paginator->sort('address');?></th>
+			<th><?php echo $this->Paginator->sort('city');?></th>
+			<th><?php echo $this->Paginator->sort('state_id');?></th>
+			<th><?php echo $this->Paginator->sort('gender_id');?></th>
+			<th><?php echo $this->Paginator->sort('age');?></th>
+			<th><?php echo $this->Paginator->sort('race_id');?></th>
+			<th><?php echo $this->Paginator->sort('nationality_id');?></th>
+			<th><?php echo $this->Paginator->sort('occupation_id');?></th>
+			<th><?php echo $this->Paginator->sort('education_id');?></th>
+			<th><?php echo $this->Paginator->sort('income_id');?></th>
+			<th><?php echo $this->Paginator->sort('oku');?></th>
+			<th><?php echo $this->Paginator->sort('registered_date');?></th>
+			<th><?php echo $this->Paginator->sort('active');?></th>
+			<th><?php echo $this->Paginator->sort('usertype_id');?></th>
+			<th><?php echo $this->Paginator->sort('tel_no');?></th>
+			<th><?php echo $this->Paginator->sort('hp_no');?></th>
+			<th><?php echo $this->Paginator->sort('email');?></th>
+			<th><?php echo $this->Paginator->sort('ictknowledge_id');?></th>
+			<th><?php echo $this->Paginator->sort('distance');?></th>
+			<th><?php echo $this->Paginator->sort('transport_id');?></th>
+			<th><?php echo $this->Paginator->sort('time_to_cbc');?></th>
+			<th><?php echo $this->Paginator->sort('household');?></th>
+			<th><?php echo $this->Paginator->sort('fixline');?></th>
+			<th><?php echo $this->Paginator->sort('fixline_id');?></th>
+			<th><?php echo $this->Paginator->sort('fixline_num');?></th>
+			<th><?php echo $this->Paginator->sort('bband');?></th>
+			<th><?php echo $this->Paginator->sort('bband_id');?></th>
+			<th><?php echo $this->Paginator->sort('bband_num');?></th>
+			<th><?php echo $this->Paginator->sort('computer');?></th>
+			<th><?php echo $this->Paginator->sort('mobile');?></th>
+			<th><?php echo $this->Paginator->sort('mobile_id');?></th>
+			<th><?php echo $this->Paginator->sort('mobile_num');?></th>
+			<th><?php echo $this->Paginator->sort('threeg');?></th>
+			<th><?php echo $this->Paginator->sort('threeg_id');?></th>
+			<th><?php echo $this->Paginator->sort('threeg_num');?></th>
+			<th><?php echo $this->Paginator->sort('cardno');?></th>
+			<th><?php echo $this->Paginator->sort('other_site');?></th>
+			<th><?php echo $this->Paginator->sort('dob');?></th>
+			<th><?php echo $this->Paginator->sort('entry_dt');?></th>
+			<th><?php echo $this->Paginator->sort('mod_dt');?></th>
+			<th><?php echo $this->Paginator->sort('sendstatus');?></th>
+			<th><?php echo $this->Paginator->sort('sitecode');?></th>
+			<th><?php echo $this->Paginator->sort('created');?></th>
+			<th><?php echo $this->Paginator->sort('modified');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
+	</tr>
+	<?php //pr($userdetails);
+	foreach ($userdetails as $userdetail): ?>
+	<tr>
+		<td><?php echo h($userdetail['Userdetail']['id']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['localid']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['icno']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['name']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['address']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['city']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['State']['name'], array('controller' => 'states', 'action' => 'view', $userdetail['State']['id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Gender']['bm'], array('controller' => 'genders', 'action' => 'view', $userdetail['Gender']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['age']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Race']['bm'], array('controller' => 'races', 'action' => 'view', $userdetail['Race']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Nationality']['bm']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Occupation']['bm'], array('controller' => 'occupations', 'action' => 'view', $userdetail['Occupation']['id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Education']['bm'], array('controller' => 'educations', 'action' => 'view', $userdetail['Education']['id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Income']['bm'], array('controller' => 'incomes', 'action' => 'view', $userdetail['Income']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['oku']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['registered_date']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['active']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Usertype']['bm']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['tel_no']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['hp_no']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['email']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Ictknowledge']['bm'], array('controller' => 'ictknowledges', 'action' => 'view', $userdetail['Ictknowledge']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['distance']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Transport']['bm'], array('controller' => 'transports', 'action' => 'view', $userdetail['Transport']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['time_to_cbc']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['household']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['fixline']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Fixline']['bm'], array('controller' => 'fixlines', 'action' => 'view', $userdetail['Fixline']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['fixline_num']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['bband']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Bband']['bm'], array('controller' => 'bbands', 'action' => 'view', $userdetail['Bband']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['bband_num']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['computer']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['mobile']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Mobile']['bm'], array('controller' => 'mobiles', 'action' => 'view', $userdetail['Mobile']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['mobile_num']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['threeg']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($userdetail['Threeg']['bm'], array('controller' => 'threegs', 'action' => 'view', $userdetail['Threeg']['id'])); ?>
+		</td>
+		<td><?php echo h($userdetail['Userdetail']['threeg_num']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['cardno']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['other_site']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['dob']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['entry_dt']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['mod_dt']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['sendstatus']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['sitecode']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['created']); ?>&nbsp;</td>
+		<td><?php echo h($userdetail['Userdetail']['modified']); ?>&nbsp;</td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $userdetail['Userdetail']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $userdetail['Userdetail']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $userdetail['Userdetail']['id']), null, __('Are you sure you want to delete # %s?', $userdetail['Userdetail']['id'])); ?>
+		</td>
+	</tr>
+<?php endforeach; ?>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	));
+	?>	</p>
+
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
+</div>

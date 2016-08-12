@@ -1,0 +1,186 @@
+        .myfileupload-buttonbar input
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            border: solid transparent;
+            border-width: 0 0 100px 200px;
+            opacity: 0.0;
+            filter: alpha(opacity=0);
+            -o-transform: translate(250px, -50px) scale(1);
+            -moz-transform: translate(-300px, 0) scale(4);
+            direction: ltr;
+            cursor: pointer;
+        }
+        .myui-button
+        {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            overflow: visible;
+            background-color: red;
+            overflow: hidden;
+        }
+
+
+.pop_up {
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+.bClose{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+
+table.album{width:100%;}
+table.album tr td{ border-left-style:none;border-top-style:none;border-right-style:none;border-bottom-style:none;}
+table tr:nth-child(even) {
+	background: none;
+}
+
+.product{
+ width:250px;
+ height:180px;
+ position:relative;
+ float:left;
+ margin: 2px;
+ padding-top:7px;
+}
+
+.detail_album{
+
+ position:relative;
+
+}
+
+
+
+.product a.jap{
+  position:absolute;
+  bottom:160px;
+  left:229px;
+    width:150px;
+
+    display:none;    
+}
+
+.product:hover a.jap, .product.hover a.jap{
+ display:block;
+}
+
+.product a.padam{
+  position:absolute;
+  bottom:142px;
+  left:229px;
+    width:150px;
+    display:none;    
+}
+.product:hover a.padam, .product.hover a.padam {
+ display:block;
+}
+
+.product a.caption{
+				float: left; 
+				position: absolute; 
+				background: #000; 
+				height: 33px; 
+				width: 250px; 
+				opacity: .5; 
+				/* For IE 5-7 */
+				filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+				/* For IE 5 */
+				-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; 
+				bottom:-7px;
+				color:white;
+                display:none;
+
+}
+
+.product:hover a.caption, .product.hover a.caption{
+ display:block;
+}
+
+
+ul, li .myblock{
+width: auto;
+height: auto;
+}
+
+.upload_image{
+background: #008fca; /* Old browsers */
+	color: #fff;
+	padding: 3px;
+	font-size: 10px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.upload_image:hover{
+background: #0373a1; /* Old browsers */
+
+	color: #cccccc;
+	padding: 3px;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.color { color:#0f41cd;}
+
+#progress
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#progress td, #progress th 
+{
+	font-size:12px;
+	border:1px dashed #cccccc;
+	padding:3px 7px 2px 7px;
+	color: #000;
+	background:white;
+
+}
+#progress th 
+{
+	font-size:12px;
+	text-align:center;
+	background-color:#2a2a2a;
+	color:#ffffff;
+	font-weight: bold;
+	padding: 6px;
+}
+#progress tr.alt td 
+{
+	color:#000000;
+	background-color:#e8e8e8;
+}
+
+
+    .div-table{display:table; border:1px solid #003399;}
+	.div-table-header{display:table-caption; background:#009999;  height: 20px; }
+	.div-table-row{display:table-row;height: 20px; }
+    .div-table-caption{display:table-cell; background:#009999; padding: 1px; border: 1px solid #003399;}
+	.div-table-caption-perkara{display:table-cell; width: 200px;background:#009999; padding: 1px; border: 1px solid #003399;}
+    .div-table-row{display:table-row;height: 20px; }
+    .div-table-col{display:table-cell; padding: 2px; width: 70px; height: 20px;border: 1px solid #003399;}
+    .div-table-col-perkara{display:table-cell; padding: 2px; width: 70px; height: 20px;border: 1px solid #003399;}
+	.pointer{background:#009999;}
+	
+	
+#show_loading{width:100px;
+position:fixed;
+background: yellow;
+z-index: 50;
+color: black;
+padding: 3px;
+margin-left: 484px;
+}
